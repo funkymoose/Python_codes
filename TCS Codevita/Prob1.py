@@ -46,7 +46,7 @@ def total(num):
     for n in range(1, len(l)):
         sum += l[n]
         if sum in l:
-            count += 1
+            count +=1
     return count
 
 print(total(50))
