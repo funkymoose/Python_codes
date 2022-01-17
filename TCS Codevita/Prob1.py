@@ -23,6 +23,7 @@ def factor(n):
     if count==0:
         return True
     return False
+# Method 1
 def total(num):
     l=[i for i in range(2,num+1) if factor(i)]
     count = 0
@@ -37,4 +38,15 @@ def total(num):
             else:
                 i+=1
     return count
+# Method2
+def total(num):
+    l = [i for i in range(2, num + 1) if factor(i)]
+    count = 0
+    sum = 2
+    for n in range(1, len(l)):
+        sum += l[n]
+        if sum in l:
+            count += 1
+    return count
+
 print(total(50))
